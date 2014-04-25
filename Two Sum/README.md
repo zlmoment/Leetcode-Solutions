@@ -1,1 +1,3 @@
-Refer to http://goo.gl/F57Uv4 for submission details.
+Refer to the Java file in this dir for details.
+
+Runtime: 396 ms
