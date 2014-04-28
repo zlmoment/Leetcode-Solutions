@@ -1,7 +1,7 @@
 /**
  * @author: Zhaoyu Li
  * 
- * Using HashMap because HashMap has constant excution time for basic operations.
+ * Using HashMap because HashMap has constant execution time for basic operations.
  * More about HashMap: http://goo.gl/EXp9To
  * 
  * IDEA: 
