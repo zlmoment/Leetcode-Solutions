@@ -8,26 +8,24 @@
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
         int length = s.length();
-        int i = 0, j = 0, max = 0;
+        int i = 0, max = 0;
         int[] exist = new int[256];
         if (length == 0) {
             return 0;
         }
-        while (j < length) {
-            if (exist[s.charAt(j)] == 1) {
-                if (j - i > max) {
-                    max = j - i;
+        for (int idx = 0 ; idx < length; idx++) {
+            if (exist[s.charAt(idx)] == 1) {
+                if (idx - i > max) {
+                    max = idx - i;
                 }
-                while (s.charAt(i) != s.charAt(j)) {
+                while (s.charAt(i) != s.charAt(idx)) {
                     exist[s.charAt(i)] = 0;
                     i++;
                 }
                 i++;
-                j++;
             }
             else {
-                exist[s.charAt(j)] = 1;
-                j++;
+                exist[s.charAt(idx)] = 1;
             }
         }
         if (length - i > max) {
