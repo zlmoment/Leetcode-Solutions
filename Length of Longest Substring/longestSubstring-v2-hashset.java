@@ -1,6 +1,5 @@
 /**
  * @author: Zhaoyu Li
- * 
 **/
 
 public class Solution {
