@@ -5,7 +5,7 @@ public class Solution {
             int a = height[i];
             for (int j = i+1; j < height.length; j++) {
                 int b = height[j];
-                int area = (j - i)) * min(a, b);
+                int area = (j - i) * min(a, b);
                 maxArea = area > maxArea ? area : maxArea;
             }
         }
