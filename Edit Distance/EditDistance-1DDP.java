@@ -13,10 +13,10 @@ public class Solution {
                 if (word1.charAt(i-1) == word2.charAt(j-1)) {
                     d[i][j] = d[i-1][j-1];
                 } else {
-                    int replace = d[i-1][j-1] + 1;
-                    int insert = d[i-1][j] + 1;
-                    int delete = d[i][j-1] + 1;
-                    d[i][j] = Math.min(replace, Math.min(insert, delete));
+                    int a = d[i-1][j-1] + 1; // 改x 改y
+                    int b = d[i-1][j] + 1;   // 删x 插x
+                    int c = d[i][j-1] + 1;   // 删y 插y
+                    d[i][j] = Math.min(a, Math.min(b, c));
                 }
             }
         }
