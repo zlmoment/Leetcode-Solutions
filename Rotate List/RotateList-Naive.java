@@ -1,4 +1,5 @@
 // a very naive solution
+// 此题还有一种巧妙解法，首尾相连构造环，从相应处断开即可
 
 /**
  * Definition for singly-linked list.
