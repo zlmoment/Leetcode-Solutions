@@ -1,6 +1,15 @@
 // Time Limitation Exceeded
 
 /**
+ * 1、2合并，遍历2n个节点
+ * 12结果和3合并，遍历3n个节点
+ * 123结果和4合并，遍历4n个节点
+ * …
+ * 123..k-1结果和k合并，遍历kn个节点
+ * 总共遍历的节点数目为n(2+3+…+k) = n*(k^2+k-2)/2, 因此时间复杂度是O(n*(k^2+k-2)/2) = O(nk^2)
+*/
+
+/**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
