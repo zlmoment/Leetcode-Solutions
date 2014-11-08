@@ -11,23 +11,21 @@
  */
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return head;
-        HashSet<Integer> hs = new HashSet<Integer>();
-        ListNode temp = head;
-        ListNode prev = head;
-        while (temp.next != null) {
-            if (!hs.contains(temp.val)) {
-                hs.add(temp.val);
-                prev = temp;
-                temp = temp.next;
-            } else {
-                temp = temp.next;
-                prev.next = temp;
-            }
+        if (head == null) {
+            return head;
         }
-        if (hs.contains(temp.val)) {
-            temp = temp.next;
-            prev.next = temp;
+        HashSet<Integer> hs = new HashSet<Integer>();
+        ListNode pointer = head;
+        ListNode prev = head;
+        while (pointer != null) {
+            if (!hs.contains(pointer.val)) {
+                hs.add(pointer.val);
+                prev = pointer;
+                pointer = pointer.next;
+            } else {
+                pointer = pointer.next;
+                prev.next = pointer;
+            }
         }
         return head;
     }
